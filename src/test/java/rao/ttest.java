@@ -2,6 +2,7 @@ package rao;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
@@ -19,11 +20,17 @@ System.setProperty("webdriver.chrome.driver","C:\\Users\\Lenovo\\Downloads\\chro
 		 driver.get("https://www.facebook.com/login/web/");
 		 l=new login(driver);
 	}
- @Test
+ @Test (priority=0)
 	void logintest() {
 		l.signup();
+		String exp="https://www.facebook.com/r.php?locale=en_GB&display=page";
+		Assert.assertEquals(driver.getCurrentUrl(),exp );
 		
 	}
+ @Test(priority=1)
+ void backtest() {
+	 driver.navigate().back();
+ }
 	
 	
 	
