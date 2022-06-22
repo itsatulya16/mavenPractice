@@ -3,14 +3,8 @@
 <suite name="Suite">
   <test thread-count="5" name="Test">
     <classes>
-     <class name="rao.ttest">
-<methods>
-<include name="logintest"></include>
-
-</methods>
-
-
-</class>
+      <class name="rao.test2"/>
+      <class name="rao.ttest"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
